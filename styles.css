@@ -1,0 +1,474 @@
+.span_holder{
+    margin-left: 100px;
+    margin-top: 60px;
+    line-height: 1.2;
+}
+body{
+    overflow-x: hidden;
+}
+.span_holder span{
+    color:white;
+    font-family: montserrat;
+    font-size: 315%;
+    -webkit-text-fill-color: initial;
+    cursor:default;
+}
+  
+.span_holder span:not(.exclude):hover{
+    background: linear-gradient(90deg,rgba(253,45,0,1) 44%, rgba(223,0,124,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 270%;
+    transition: 0.2s;
+}
+
+
+
+
+.span_holder span.exclude{
+    background: linear-gradient(90deg,rgba(253,45,0,1) 44%, rgba(223,0,124,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-size: 450%;
+}
+.span_holder p{
+    margin:0;
+    color: grey;
+    font-size: 85%;
+    opacity: 0.5;
+    font-style: italic;
+}
+.separator{
+    margin-top: 30px;
+    border-bottom: 1px solid grey;
+    
+    color: grey;
+}
+.card{
+    border: 1px solid white;
+    /* box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05), inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+    5px 5px 5px rgba(0,0,0,0.05), inset -5px -5px 5px rgba(255, 255, 255, 0.5); */
+    border-radius: 15px;
+    margin-left: 50px;
+}
+.card:hover{
+    transform:translateY(-50px);
+    transition: 0.5s;
+    
+}
+.flexer{
+    display: flex;
+    justify-content: center; 
+}
+.proj_section{
+    color:white;
+    font-family: montserrat;
+    font-size: 30px;
+    -webkit-text-fill-color: initial;
+    cursor:default;
+    margin: 100px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.proj_section span{
+    background: linear-gradient(90deg, rgba(119, 234, 187, 1) 44%, rgba(0, 255, 255, 1) 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+}
+
+
+.img_edit{
+    height: 300px;
+    width: 500px;
+    position: relative;
+    left: 10%;     /*700px*/
+    top: 10%;       /*100px*/
+    
+}
+
+
+.scroll-up{
+    transform: translateY(-30%);
+    opacity: 1;
+    transition: all 3s ease;
+}
+
+.scroll-down{
+    transform: translateY(60%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.section{
+    display: flex;
+    flex-direction: row;
+}
+.section.scrolled-down .img_edit{
+    transform: translateY(-60%);
+} 
+
+.section.scrolled-up .img_edit{
+    transform: translateY(0);
+}
+
+.section p{
+    font-size: 220%;   /*40px*/
+    color: white;
+    font-family: montserrat;
+    margin-bottom: 2px;
+    margin-left: 10%;  /*100px*/
+}
+
+.section span{
+    color: white;
+    font-family: monospace;
+    font-weight: lighter;
+    margin-left: 10%; /*100px*/
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.small_floater{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+}
+
+.div-des{
+    height: 4px;
+    width: 200px;
+    background-color: white; 
+    margin-left: 10%;  /*100px*/
+}
+
+.cartlap{
+    height: 200px;
+    width: 320px;
+    position: relative;
+    left: 1%;  /*100px*/
+    top: 80px;
+    transform: translateY(-10%);
+    transition: transform 2s ease;
+}
+  
+
+.loglap{
+    height: 200px;
+    width: 320px;
+    position: relative;
+    left: 1%;  /*100px*/
+    top: 80px;
+    transform: translateY(-10%);
+    transition: transform 2s ease;
+}
+
+.mov{
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+
+.conbut{
+    text-decoration: none;
+    display: block;
+    margin-top: 25px;
+    color: white;
+    padding: 10px;
+    padding-bottom: 1px;
+    border: 1px solid;
+    border-image: linear-gradient(90deg,rgba(253,45,0,1) 44%, rgba(223,0,124,1) 100%);
+    border-image-slice: 1;
+    height: 30px;
+    font-size: 15px;
+    width: 95px;
+    font-size: 17px;
+    font-family: monospace;
+    display: flex;
+}
+
+.vibut{
+    margin-left: 10%;  
+}
+
+.button_holder{
+    display: flex;
+    justify-content: flex-start;  
+    margin-left: 0;
+}
+
+
+.header{
+    background: linear-gradient(90deg, rgba(119, 234, 187, 1) 44%, rgba(0, 255, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    font-family: monospace;
+    font-size: 50px;
+    font-weight: bold;
+    transform: translate(40%, 20%);
+}
+
+.flexer
+{
+display: flex;
+flex-direction: column;
+color: white;
+font-size: 25px;
+margin-top: 50px;
+margin-left: 20px
+}
+
+.main-flex{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+}
+
+.flexer p{
+    margin-top: 0;
+    margin-left: 20px;
+}
+
+.email-handler{
+    margin-left: 400px;
+    color: white;
+    border: 1px solid;
+    border-image: linear-gradient(90deg,rgba(253,45,0,1) 44%, rgba(223,0,124,1) 100%);
+    width: 500px;
+}
+
+.email-handler form input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg,rgba(253,45,0,1) 44%, rgba(223,0,124,1) 100%);
+    border-image-slice: 1;
+    display: block;
+    margin-left: 20px;
+    color: white;
+    font-family: monospace;
+}
+
+.email-handler form label{
+    display: block;
+   margin-bottom: 10px;
+   margin-left: 20px;
+   font-family: monospace;
+   font-size: 15px;
+}
+
+.email-handler form textarea{
+    background-color: transparent;
+    border-image: linear-gradient(90deg,rgba(253,45,0,1) 44%, rgba(223,0,124,1) 100%);
+    border-image-slice: 1; 
+    margin-left: 20px;    
+    color: white;
+    font-family: monospace;
+}
+
+.email-handler form button{
+    background-color: transparent;
+    color: white;
+    border-image: linear-gradient(90deg,rgba(253,45,0,1) 44%, rgba(223,0,124,1) 100%);
+    border-image-slice: 1;
+    font-family: monospace;
+    margin-left: 20px;
+    font-size: 20px;
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.email-handler form input:focus{
+    border: none;
+    border-bottom-color: white; 
+}
+
+.skill{
+    height: 10px;
+    width: 400px;
+    border: 1px solid white;
+    border-radius: 6px;
+    
+}
+
+/* .box{
+    background-color: green;
+    animation-name: progressBar;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 400px;
+    height: 10px;
+    border-radius: 6px;
+    margin-left: 0px;
+} */
+
+.box {
+    background: linear-gradient(90deg, rgba(253, 45, 0, 1) 44%, rgba(255, 255, 0, 1) 70%, rgba(119, 234, 187, 1) 100%);
+
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 0; 
+    height: 10px;
+    border-radius: 6px;
+    margin-left: 0px;
+    /* animation-play-state: running;  */
+  }
+  
+
+#skill-section p,div{
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: monospace;
+    margin-left: 50px;
+}   
+
+#skill-section{
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+            inset -5px -5px 5px rgba(0, 0, 0, 0.2),
+            5px 5px 5px rgba(0, 0, 0, 0.2),
+            -5px -5px 5px rgba(0, 0, 0, 0.2);
+    padding-top:1px;
+    height: 500px;
+    width: 1000px;
+}
+
+/* @keyframes progressBar {
+    0% {
+        width: 0;
+      }
+      100% {
+      }
+} */
+#loading-page{
+    position: fixed;
+    height: 100vh;
+    width:100%;
+    background: #000 ;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+#loading-page img{
+    height: 15%;
+    position: fixed;
+    left: 50%;
+}
+
+
+.loader{
+    height: 10px;
+    width: 200px;
+    border: 1px solid white;
+    
+}
+
+.loader.hidden{
+    animation: loadingBar 1s;
+    animation-fill-mode: forwards;
+}
+
+/* .progresser
+    {
+        background: linear-gradient(90deg,rgba(253,45,0,1) 44%, rgba(223,0,124,1) 100%);;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-name: loadingBar;
+        width: 0; 
+        height: 10px;
+        border-radius: 6px;
+        margin-left: 0px;
+        animation-play-state: running; 
+      } */
+
+@keyframes loadingBar{
+     /* 0%{
+        opacity: 1;
+        visibility: visible;
+    }
+    25%{
+        width: 25%;
+    }
+    50%{
+        width: 50%;
+    }
+    75%{
+        width: 75%;
+    }   */
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.cskill{
+    margin-left: 60vh;
+}
+
+.about_text{
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.abthead{
+
+    background: linear-gradient(to left, #FFFF00, #FFEC00, #FFD400, #FFC800);
+    font-size: 50px;
+    font-weight: bolder;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 10%;
+}
+
+.abt_con{
+    width: 50%;
+    position: relative;
+    left: 20%;
+}
+
+.abt_con p{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.abt_span::before{
+    content: "<p>";
+    margin:0;
+    color: grey;
+    font-size: 85%;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.abt_span::after{
+    content: "</p>";
+    margin:0;
+    color: grey;
+    font-size: 85%;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+footer p{
+    font-family: inherit;
+    margin-top: 5%;
+    margin-left: 50%;
+    font-size: 15px;
+    color: grey;
+
+}
+
+
+  
