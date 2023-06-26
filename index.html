@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <title>My CV</title>
+</head>
+
+<body style="background-color: #161616;">
+ 
+  <div class="span_holder ">
+    <p>String intro(){</p><br>
+    <p>String name =</p>
+    <p>"</p><span class="wobble animated">H</span><span>i</span><span>,</span><br><span>I</span><span>'</span><span>m
+    </span><span class="exclude">S</span><span>a</span><span>h</span><span>i</span><span>l</span><span>,</span>
+    <!-- <br><span>a </span><span>p</span><span>r</span><span>o</span><span>g</span><span>r</span><span>a</span><span>m</span><span>m</span><span>e</span><span style="display:inline">r</span><p style="display:inline">          ;"</p> -->
+    <br>
+    <span id="element"></span>
+    <br><br>
+    <p>return name;</p>
+    <p>}</p>
+    <div class="button_holder"><a style="margin-right: 25px;" class="conbut" href="contact.html">Contact Me</a><a class="conbut" href="about.html">About Me</a></div>
+    
+  </div>
+
+  <div class="proj_section">
+    <span>P</span>roject Section
+  </div>
+
+
+
+  <!--The Projects Section -->
+
+  <div id="all_proj">
+
+    <section class="section">
+      <div>
+        <p>CakeArea<br />
+        <div class="div-des"></div> <br /><span>A website to allow users to order their favourite cakes, reducing the
+          time by 75%</span></p>
+          <a class="conbut vibut" href="https://cakearea.000webhostapp.com/">Visit <ion-icon name="chevron-forward-outline"></ion-icon></a>
+          
+      </div>
+      <div >
+        <div><img src="images/cakelap.png" alt="laptop" class="img_edit"></div>
+        
+        <div class="small_floater">
+          <img src="images/cartlap.png" alt="laptop" class="cartlap">
+          <img src="images/loglap.png" alt="laptop" class="loglap">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section mov">
+      <div>
+        <p>QuadBTech <br />
+        <div class="div-des"></div> <br /><span>A ReactJs website that implements an API allowing users to get the
+          summary of their favourite movies</span></p>
+          <a class="conbut vibut" href="https://github.com/soulsahil/MovieSearch.git">Github <ion-icon name="chevron-forward-outline"></ion-icon></a>
+      </div>
+      <div>
+        <img src="images/movlap1.png" alt="laptop" class="img_edit">
+        <div class="small_floater">
+          <img src="images/movlap2.png" alt="laptop" class="cartlap mov1">
+          <img src="images/movlap3.png" alt="laptop" class="loglap mov2">
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+
+
+
+<!--The Skills Section -->
+
+  <div class="proj_section">
+  <span>M</span>y Skills
+  </div>
+
+  <div id="skill-section">
+    <span class="proj_section" style="display:block; margin-top: 50px;">Technical Skills</span>
+    <table>
+      <tr>
+        <td>
+          <p>Java<span style="margin-left: 80%;">85%</span></p>
+
+
+
+          <div class="skill" data-progress="80">
+            <div class="box"></div>
+          </div>
+
+
+
+        </td>
+        <td>
+          <p>HTML<span style="margin-left: 80%;">90%</span></p>
+          <div class="skill" data-progress="80">
+            <div class="box"></div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>CSS<span style="margin-left: 83%;">90%</span></p>
+          <div class="skill" data-progress="80">
+            <div class="box"></div>
+          </div>
+        </td>
+        <td>
+          <p>JavaScript<span style="margin-left: 60%;">75%</span></p>
+          <div class="skill" data-progress="80">
+            <div class="box"></div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>ReactJS<span style="margin-left: 70%;">65%</span></p>
+          <div class="skill" data-progress="80">
+            <div class="box"></div>
+          </div>
+        </td>
+        <td>
+          <p>PHP<span style="margin-left: 83%;">70%</span></p>
+          <div class="skill" data-progress="80">
+            <div class="box"></div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>MySQL<span style="margin-left: 76%;">80%</span></p>
+          <div class="skill" data-progress="80">
+            <div class="box"></div>
+          </div>
+        </td>
+        <td>
+    </table>
+  </div>
+  <div>
+
+  </div>
+
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['a Java Programmer', 'a Web Developer'],
+      typeSpeed: 100,
+      loop: true,
+    });
+  </script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <footer><p>Made with 🤍 in 2023</p></footer>
+</body>
+
+</html>
