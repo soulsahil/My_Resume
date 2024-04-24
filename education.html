@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/education.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Education</title>
+</head>
+<body style="background-color: #161616;">
+    <div class="sidebar" id="sidebar">
+        <h2>Sidebar</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="internship.html">Internship</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+<section class="design-section">
+
+    <ion-icon name="menu-outline" class = "menu-icon" onclick="toggleSidebar()"></ion-icon>
+
+
+    <h1 class="education-header">Education</h1>
+    <div class="random_blobs">
+
+    </div>
+<div class="timeline">
+
+                  <div class="timeline-empty">
+                  </div>
+
+               <div class="timeline-middle">
+                   <div class="timeline-circle"></div>
+               </div>
+               <div class="timeline-component timeline-content">
+                <h3>SJB Institute of Technology</h3>
+                <p>Degree: B.E. <br> Duration: December 2020 - May 2024 <br> CGPA: 8.76 / 10</p>
+           </div>
+                <div class="timeline-component timeline-content">
+                         <h3>Narayana PU College</h3>
+                         <p>Degree: H.Sc(12th) <br> Duration: May 2019 - March 2020 <br> Percentage: 73.8%</p>
+                </div>
+                <div class="timeline-middle">
+                    <div class="timeline-circle"></div>
+                </div>
+                <div class="timeline-empty">
+                </div>
+
+                <div class="timeline-empty">
+                </div>
+
+               <div class="timeline-middle">
+                   <div class="timeline-circle"></div>
+               </div>
+               <div class="timeline-component timeline-content">
+                <h3>Mother Mary's English High School</h3>
+                <p>Degree: S.Sc(10th) <br> Duration: June 2017 - May 2018 <br> Percentage: 90%</p>
+           </div>
+
+       </div>
+    </div> 
+</section>
+
+<script>
+
+function createBlobs(numBlobs) {
+    for (let i = 0; i < numBlobs; i++) {
+        createBlob();
+    }
+}
+
+function createBlob() {
+    const blob = document.createElement('div');
+    blob.classList.add('blob');
+
+    const container = document.body;
+    const containerRect = container.getBoundingClientRect();
+    const containerWidth = containerRect.width;
+    const containerHeight = containerRect.height;
+    const blobWidth = 20; // Set the width of the blob
+    const blobHeight = 20; // Set the height of the blob
+
+    const maxPosX = containerWidth - blobWidth;
+    const maxPosY = containerHeight - blobHeight;
+
+    let posX = Math.random() * maxPosX;
+    let posY = Math.random() * maxPosY;
+
+    let speedX = (Math.random() - 0.5) * 10; // Adjust the speed as needed
+    let speedY = (Math.random() - 0.5) * 10; // Adjust the speed as needed
+
+    const rgbaCodes = [
+        'rgba(253, 45, 0, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(119, 234, 187, 1)',
+        'rgba(255, 255, 255, 1)',
+        'rgba(0, 0, 255, 1)'
+    ];
+
+    const randomRgbaCode = rgbaCodes[Math.floor(Math.random() * rgbaCodes.length)];
+
+    blob.style.backgroundColor = randomRgbaCode;
+    blob.style.boxShadow = `0 0 3px 2px ${randomRgbaCode}`;
+
+    function moveBlob() {
+        posX += speedX;
+        posY += speedY;
+
+        if (posX < 0 || posX + blobWidth > containerWidth) {
+            speedX *= -1;
+        }
+        if (posY < 0 || posY + blobHeight > containerHeight) {
+            speedY *= -1;
+        }
+
+        blob.style.left = `${posX}px`;
+        blob.style.top = `${posY}px`;
+    }
+
+    moveBlob();
+
+    setInterval(moveBlob, 50);
+
+    // Append the blob to the body
+    document.body.appendChild(blob);
+}
+
+createBlobs(10);
+
+</script>
+<script type="text/javascript" src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
