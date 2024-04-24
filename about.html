@@ -7,19 +7,124 @@
     
 </head>
 <body style="background-color: #161616;">
-    <div id="loading-page">
-        <img src="artifact.gif" alt="">
-    </div>
-    <h1 class="header abthead">About Me</h1>
-    <div class="abt_con">
-        <span class="abt_span"><p class="about_text">Hello! I'm Sahil Tiwari, a computer science engineering student at SJBIT with a passion for website design and Java programming. I excel in communication and problem-solving, enabling me to effectively collaborate and find innovative solutions. <br><br>
 
-            I'm a bibliophile, avid gardener, and gaming enthusiast. With strong organizational skills, I ensure efficient project execution and strive for continuous learning to stay ahead.
+
+    <div id="loading-page">
+        <img src="images/artifact.gif" alt="">
+    </div>
+
+    
+    
+
+      <!-- <ion-icon name="menu-outline" class = "menu-icon" onclick="toggleSidebar()"></ion-icon> -->
+
+    <h1 class="abthead">About Me</h1>
+    <ion-icon name="menu-outline" class = "menu-icon" onclick="toggleSidebar()"></ion-icon>
+    <div class="sidebar" id="sidebar" style="padding: 0;">
+        <h2 style="margin-top: 0;">Sidebar</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="internship.html">Internship</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+    <div class="div-container-about">
+        <div class="random_blobs">
             
-           <br><br> Let's connect and collaborate on exciting projects or discuss technology, books, gardening, or gaming!
-            
-            </p></span>
-    </div>   
-    <script type="text/javascript" src="script.js"></script>
+        </div>
+        <div class="abt_con">
+            <span class="abt_span"><p class="about_text">Hello! I'm <span class="name-style">Sahil Tiwari</span>, a <span class="course-style">Computer Science and Engineering</span> student at <span class="clg-style">SJB Institute of Technology</span> with a passion for <span class="course-style">website design</span> and <span class="name-style">Java</span> programming. I excel in <span class="course-style">communication</span> and <span class="clg-style">problem-solving</span>, enabling me to effectively collaborate and find innovative solutions. <br><br>
+    
+                I'm a <span class="clg-style">bibliophile</span>, <span class="course-style">avid gardener</span>, and <span class="name-style">gaming enthusiast</span>. With strong organizational skills, I ensure efficient project execution and strive for continuous learning to stay ahead.
+                
+               <br><br> Let's <span class="course-style">connect</span> and <span class="clg-style">collaborate</span> on exciting projects or discuss technology, books, gardening, or gaming!
+                
+                </p></span>
+        </div>   
+    </div>
+    <script>
+
+function createBlobs(numBlobs) {
+    for (let i = 0; i < numBlobs; i++) {
+        createBlob();
+    }
+}
+
+function createBlob() {
+    const blob = document.createElement('div');
+    blob.classList.add('blob');
+
+    document.querySelector('.random_blobs').appendChild(blob);
+
+
+    const container = document.querySelector('.random_blobs');
+    const containerRect = container.getBoundingClientRect();
+    const containerLeft = containerRect.left;
+    const containerTop = containerRect.top;
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
+    const blobWidth = blob.offsetWidth;
+    const blobHeight = blob.offsetHeight;
+
+    const maxPosX = containerWidth - blobWidth;
+    const maxPosY = containerHeight - blobHeight;
+
+    let posX = Math.random() * maxPosX;
+    let posY = Math.random() * maxPosY;
+    
+
+    let speedX = (Math.random() - 0.5) * 100;
+    let speedY = (Math.random() - 0.5) * 50;
+
+    const rgbaCodes = [
+        'rgba(253, 45, 0, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(119, 234, 187, 1)',
+        'rgba(255, 255, 255, 1)',
+        'rgba(0, 0, 255, 1)'
+    ];
+
+const shuffledRgbaCodes = shuffleArray(rgbaCodes);
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+const randomRgbaCode = shuffledRgbaCodes.pop(); 
+
+    blob.style.backgroundColor = randomRgbaCode;
+    blob.style.boxShadow = `0 0 3px 2px ${randomRgbaCode}`;
+
+    function moveBlob() {
+        posX += speedX;
+        posY += speedY;
+
+        if (posX < 0 || posX + blobWidth > containerWidth) {
+            speedX *= -1;
+        }
+        if (posY < 0 || posY + blobHeight > containerHeight) {
+            speedY *= -1;
+        }
+
+        blob.style.left = `${posX}px`;
+        blob.style.top = `${posY}px`;
+    }
+
+    moveBlob();
+
+    setInterval(moveBlob, 50);
+}
+
+createBlobs(30);
+</script>
+
+<script type="text/javascript" src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>
