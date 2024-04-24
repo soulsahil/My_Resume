@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f1f1f;
+  min-height: 100vh;
+  padding: 50px 0;
+  font-family: Jost;
+  z-index: 1;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: #1f1f1f;
+  -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+          box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+  border-radius: 5px;
+  color: white;
+  padding: 1.75rem;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  margin: 1rem;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.timeline-component {
+  margin: 0px 20px 20px 20px;
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+    z-index: 1;
+  }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    width: 3px;
+    height: 100%;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.education-header
+{
+    color: white;
+    background: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    background-color: #f1f1f1; 
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 8px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+.blob {
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(234, 16, 16, 0.5);
+    animation: moveBlob linear infinite;
+    z-index: 0;
+}
+
+.line{
+    position: relative;
+    width: 20vw;
+    height: 2px;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+}
+
+.menu-icon
+{
+    color: white;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 7vh;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    background-color: #111;
+    padding-top: 20px;
+    transition: 0.5s;
+    overflow-x: hidden;
+    right: 0;
+  }
+  
+  .sidebar h2 {
+    text-align: center;
+    background: linear-gradient(90deg,rgba(253,45,0,1) 44%, rgba(255, 255, 0, 1) 70%, rgba(0, 255, 255, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .sidebar a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to left, #FFFF00, #FFEC00, #FFD400, #FFC800);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .sidebar a:hover::before {
+    width: 100%;
+  }
+  
+  .sidebar a:hover {
+    background: linear-gradient(90deg, rgba(119, 234, 187, 1) 44%, rgba(0, 255, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+  /* Responsive layout - adjust the sidebar to take full width on small screens */
+  @media screen and (max-width: 600px) {
+    .sidebar {
+      width: 100%;
+      right: 0;
+    }
+    .sidebar a {
+      float: right;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .toggle-btn {
+    font-size: 20px;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+  }
