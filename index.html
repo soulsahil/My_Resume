@@ -13,7 +13,19 @@
 </head>
 
 <body style="background-color: #161616;">
- 
+  <section class = 'section1'>
+  
+  <ion-icon name="menu-outline" class = "menu-icon" onclick="toggleSidebar()"></ion-icon>
+
+  <div class="sidebar" id="sidebar">
+    <h2>Sidebar</h2>
+    <ul>
+      <li><a href="internship.html">Internships</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+  </div>
   <div class="span_holder ">
     <p>String intro(){</p><br>
     <p>String name =</p>
@@ -25,81 +37,76 @@
     <br><br>
     <p>return name;</p>
     <p>}</p>
-    <div class="button_holder"><a style="margin-right: 25px;" class="conbut" href="contact.html">Contact Me</a><a class="conbut" href="about.html">About Me</a></div>
+    <div class="button_holder"><a style="margin-right: 25px;" class="conbut" href="contact.html">Contact Me</a><a id="downloadButton" class="conbut">Download Resume</a></div>
     
   </div>
+</section>
 
-  <div class="proj_section">
-    <span>P</span>roject Section
-  </div>
 
 
 
   <!--The Projects Section -->
+  
 
-  <div id="all_proj">
-
-    <section class="section">
-      <div>
-        <p>CakeArea<br />
-        <div class="div-des"></div> <br /><span>A website to allow users to order their favourite cakes, reducing the
-          time by 75%</span></p>
-          <a class="conbut vibut" href="https://cakearea.000webhostapp.com/">Visit <ion-icon name="chevron-forward-outline"></ion-icon></a>
-          
-      </div>
-      <div >
-        <div><img src="cakelap.png" alt="laptop" class="img_edit"></div>
+<section class="section2">
+  <div class="proj_section">
+    <span>P</span>roject Section
+  </div>
+  <section class="section">
+    <div>
+      <p>CakeArea<br />
+      <div class="div-des"></div> <br /><span>A website to allow users to order their favourite cakes, reducing the
+        time by 75%</span></p>
+        <a class="conbut vibut" href="https://cakearea.000webhostapp.com/">Visit <ion-icon name="chevron-forward-outline"></ion-icon></a>
         
-        <div class="small_floater">
-          <img src="cartlap.png" alt="laptop" class="cartlap">
-          <img src="loglap.png" alt="laptop" class="loglap">
-        </div>
+    </div>
+    <div >
+      <div><img src="images/cakelap.png" alt="laptop" class="img_edit"></div>
+      
+      <div class="small_floater">
+        <img src="images/cartlap.png" alt="laptop" class="cartlap">
+        <img src="images/loglap.png" alt="laptop" class="loglap">
       </div>
-    </section>
+    </div>
+  </section>
+</section>
+    
 
+    <section class="section section3">
 
-    <section class="section mov">
       <div>
         <p>QuadBTech <br />
-        <div class="div-des"></div> <br /><span>A ReactJs website that implements an API allowing users to get the
-          summary of their favourite movies</span></p>
+        <div class="div-des"></div> <br /><span>A ReactJs website that implements an API allowing users to get the summary of their favourite movies</span></p>
           <a class="conbut vibut" href="https://github.com/soulsahil/MovieSearch.git">Github <ion-icon name="chevron-forward-outline"></ion-icon></a>
       </div>
       <div>
-        <img src="movlap1.png" alt="laptop" class="img_edit">
+        <div><img src="images/movlap1.png" alt="laptop" class="img_edit"></div>
+        
         <div class="small_floater">
-          <img src="movlap2.png" alt="laptop" class="cartlap mov1">
-          <img src="movlap3.png" alt="laptop" class="loglap mov2">
+          <img src="images/movlap2.png" alt="laptop" class="cartlap">
+          <img src="images/movlap3.png" alt="laptop" class="loglap">
         </div>
       </div>
     </section>
 
-  </div>
-
-
-
-
+  <!-- </div> -->
 
 <!--The Skills Section -->
 
+<section class = 'section4'>
   <div class="proj_section">
   <span>M</span>y Skills
   </div>
 
   <div id="skill-section">
-    <span class="proj_section" style="display:block; margin-top: 50px;">Technical Skills</span>
     <table>
       <tr>
         <td>
           <p>Java<span style="margin-left: 80%;">85%</span></p>
 
-
-
           <div class="skill" data-progress="80">
             <div class="box"></div>
           </div>
-
-
 
         </td>
         <td>
@@ -144,11 +151,13 @@
             <div class="box"></div>
           </div>
         </td>
-        <td>
+        
     </table>
+    <div class="footer"><p>Made with 🤍 in 2023</p></div>
   </div>
   <div>
 
+  
   </div>
 
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
@@ -163,7 +172,7 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <footer><p>Made with 🤍 in 2023</p></footer>
+</section>
 </body>
 
 </html>
