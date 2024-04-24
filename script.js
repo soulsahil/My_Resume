@@ -97,3 +97,28 @@ var loader = document.getElementById("loading-page");
 window.addEventListener("load", function(){
         loader.style.display = "none";
 });
+
+
+function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    var content = document.querySelector('.content');
+    sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
+    content.style.marginRight = content.style.marginRight === '250px' ? '0' : '250px';
+  }
+
+  
+
+    document.getElementById('downloadButton').addEventListener('click', function() {
+        const fileURL = 'Sahil_Tiwari_Resume.pdf';
+
+        const downloadLink = document.createElement('a');
+        downloadLink.href = fileURL;
+
+        downloadLink.download = 'Sahil_Tiwari_Resume.pdf';
+
+        document.body.appendChild(downloadLink);
+
+        downloadLink.click();
+
+        document.body.removeChild(downloadLink);
+    });
